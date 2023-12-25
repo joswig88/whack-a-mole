@@ -1,9 +1,32 @@
 <html>
   <head>
     <link rel="stylesheet" href="./src/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Playpen+Sans:wght@400;600;800&display=swap" rel="stylesheet">
   </head>
   <body>
-    <h1></h1>
+    <!-- Starting Screen for Difficulty Selection -->
+    <div id="snow"></div>
+    <div id="start-screen">
+      <h2>Select Difficulty:</h2>
+      <div>
+        <input type="radio" id="easy" name="difficulty" value="easy">
+        <label for="easy">Easy</label>
+      </div>
+      <div>
+        <input type="radio" id="normal" name="difficulty" value="normal" checked>
+        <label for="normal">Normal</label>
+      </div>
+      <div>
+        <input type="radio" id="hard" name="difficulty" value="hard">
+        <label for="hard">Hard</label>
+      </div>
+      <button id="start-game"onclick="play();">Start Game</button>
+    </div>
+
+    <!-- Main Game Content -->
+    <h1 id="title">Whack-A-Mole</h1>
     <div>
       <div>
         <h2>Click start to play!</h2>
@@ -12,18 +35,22 @@
         <h2>score: <span id="score">0</span></h2>
       </div>
       <div>
-          <h2><span id="timer">0</span> seconds left.</h2>
+        <h2><span id="timer">0</span> seconds left.</h2>
       </div>
     </div>
     <div class="grid">
-      <div id="hole0" class="hole">
-        <div id="mole0" class="mole"></div>
-      </div>
-      <div id="hole1" class="hole">
-        <div id="mole1" class="mole"></div>
-      </div>
-      <!--TODO: Add the missing holes and moles. -->
+      <!-- Holes and Moles -->
+      <div id="hole0" class="hole"><div id="mole0" class="mole"></div></div>
+      <div id="hole1" class="hole"><div id="mole1" class="mole"></div></div>
+      <div id="hole2" class="hole"><div id="mole2" class="mole"></div></div>
+      <div id="hole3" class="hole"><div id="mole3" class="mole"></div></div>
+      <div id="hole4" class="hole"><div id="mole4" class="mole"></div></div>
+      <div id="hole5" class="hole"><div id="mole5" class="mole"></div></div>
+      <div id="hole6" class="hole"><div id="mole6" class="mole"></div></div>
+      <div id="hole7" class="hole"><div id="mole7" class="mole"></div></div>
+      <div id="hole8" class="hole"><div id="mole8" class="mole"></div></div>
     </div>
+    <button id="refresh-button">Refresh Game</button>
     <script src="./src/index.js"></script>
   </body>
 </html>
