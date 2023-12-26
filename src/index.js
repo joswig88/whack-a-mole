@@ -106,10 +106,25 @@ document.getElementById('start-game').addEventListener('click', () => {
 moles.forEach(mole => mole.addEventListener('click', whack));
 
 // Refresh Button to start the game over
-document.getElementById('refresh-button').addEventListener('click', function() {
-  // Refreshes the current page
-  location.reload();
-});
+function resetGame() {
+  // Reset score and display
+  score = 0;
+  scoreDisplay.textContent = '0';
+
+  // Stop the game timer
+  clearInterval(gameTimer);
+  timerDisplay.textContent = '0';
+
+  // Reset game variables
+  timeUp = false;
+  lastHole = null;
+
+  // Start a new game
+  startGame();
+}
+
+// Add an event listener to the "Refresh" button
+document.getElementById('refresh-button').addEventListener('click', resetGame);
 
 // Music added for background sound as user plays
 const song = new Audio("music/What's The Problem.mp3");
