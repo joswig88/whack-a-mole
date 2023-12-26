@@ -85,7 +85,7 @@ h2 {
 }
 
 .grid:hover {
-  cursor: url('https://github.com/joswig88/whack-a-mole/blob/main/assets/mallet.png?raw=true'), auto;
+  cursor: url('https://github.com/joswig88/whack-a-mole/blob/main/assets/mallet.png?raw=true') 20 30, auto;
 }
 
 .hole {
