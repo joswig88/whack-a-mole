@@ -129,7 +129,7 @@ document.getElementById('refresh-button').addEventListener('click', resetGame);
 // Music added for background sound as user plays
 const song = new Audio("music/What's The Problem.mp3");
 
-//adding in snow for the winter season
+//music for the game
 
 
 function playAudio(audioObject) {
