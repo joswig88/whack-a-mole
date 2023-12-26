@@ -120,7 +120,7 @@ h2 {
 
 .hole.show .mole {
   top: 0;
-  animation: pop 2s ease;
+  animation: pop 2s ease-in-out;
 }
 
 
